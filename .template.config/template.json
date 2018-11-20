@@ -1,0 +1,30 @@
+{
+  "author": "Me",
+  "classifications": [],
+  "description": "template description",
+  "name": "Clean Architecture",
+  "defaultName": "CleanArchitecture",
+  "identity": "Clean.Architecture.CSharp",
+  "groupIdentity": "Clean.Architecture",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "ClnArc",
+  "sourceName": "CleanArchitecture.Web",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "src\\CleanArchitecture.Core\\CleanArchitecture.Core.csproj"
+    },
+    {
+      "path": "src\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj"
+    },
+    {
+      "path": "src\\CleanArchitecture.Web\\CleanArchitecture.Web.csproj"
+    },
+    {
+      "path": "tests\\CleanArchitecture.Tests\\CleanArchitecture.Tests.csproj"
+    }
+  ]
+}
