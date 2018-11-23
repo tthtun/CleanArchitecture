@@ -1,13 +1,10 @@
-
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
   <TemplateData>
     <Name>Clean Architecture</Name>
     <Description>template description</Description>
     <TemplateID>Clean.Architecture.CSharp</TemplateID>
     <DefaultName>CleanArchitecture</DefaultName>
-    
     <Icon>project-icon.png</Icon>
-    
     <ProjectType>CSharp</ProjectType>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <SortOrder>5000</SortOrder>
