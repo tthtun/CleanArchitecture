@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
   <TemplateData>
     <Name>Clean Architecture</Name>
-    <Description>template description</Description>
+    <Description>A project/solution template for a solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using .NET Core, based upon Steve "ardalis" Smith's 'Clean Architecture' solution. </Description>
     <TemplateID>Clean.Architecture.CSharp</TemplateID>
     <DefaultName>CleanArchitecture</DefaultName>
     <Icon>project-icon.png</Icon>
@@ -19,7 +19,7 @@
       <CustomParameter Name = "$language$" Value="CSharp" />
       <CustomParameter Name = "$uistyle$" Value="none"/>
       <CustomParameter Name = "$groupid$" Value="Clean.Architecture" />
-      <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\Web\SideWaffle"/>
+      <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\Web"/>
     </CustomParameters>
   </TemplateContent>
   <WizardExtension>

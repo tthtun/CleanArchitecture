@@ -1,7 +1,7 @@
 {
   "author": "Me",
   "classifications": [],
-  "description": "A project/solution template for a solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using .NET Core, based upon Steve "ardalis" Smith's 'Clean Architecture' solution. ",
+  "description": "template description",
   "name": "Clean Architecture",
   "defaultName": "CleanArchitecture",
   "identity": "Clean.Architecture.CSharp",
@@ -11,7 +11,7 @@
     "type": "project"
   },
   "shortName": "ClnArc",
-  "sourceName": "CleanArchitecture.Web",
+  "sourceName": "CleanArchitectureSolutionTemplate",
   "guids": [],
   "primaryOutputs": [
     {
