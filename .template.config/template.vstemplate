@@ -9,7 +9,7 @@
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <SortOrder>5000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <ProvideDefaultName>true</ProvideDefaultName>
+    <ProvideDefaultName>false</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
   </TemplateData>
