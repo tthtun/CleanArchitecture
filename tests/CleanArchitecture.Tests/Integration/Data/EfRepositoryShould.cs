@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.Entities;
+using CleanArchitecture.Core.Entities;
 using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

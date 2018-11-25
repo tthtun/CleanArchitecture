@@ -1,4 +1,4 @@
-﻿using Autofac;
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using CleanArchitecture.Core.SharedKernel;
 using CleanArchitecture.Infrastructure.Data;

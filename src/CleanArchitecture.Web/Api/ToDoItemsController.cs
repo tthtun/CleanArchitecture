@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.Entities;
+using CleanArchitecture.Core.Entities;
 using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Web.ApiModels;
 using CleanArchitecture.Web.Filters;

@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.Entities;
+using CleanArchitecture.Core.Entities;
 using CleanArchitecture.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.Events;
+using CleanArchitecture.Core.Events;
 using CleanArchitecture.Core.SharedKernel;
 
 namespace CleanArchitecture.Core.Entities

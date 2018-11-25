@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.Interfaces;
+using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Core.SharedKernel;
 
 namespace CleanArchitecture.Tests

@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.SharedKernel;
+using CleanArchitecture.Core.SharedKernel;
 using System.Collections.Generic;
 
 namespace CleanArchitecture.Core.Interfaces

@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Core.Interfaces;
+using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Data;
 using CleanArchitecture.Web;
 using Microsoft.AspNetCore.Hosting;
