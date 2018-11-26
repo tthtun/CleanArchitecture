@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
   <TemplateData>
     <Name>Clean Architecture</Name>
-    <Description>A project/solution template for a solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using .NET Core, based upon Steve "ardalis" Smith's 'Clean Architecture' solution. </Description>
+    <Description>A template for a solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using .NET Core.</Description>
     <TemplateID>Clean.Architecture.CSharp</TemplateID>
     <DefaultName>CleanArchitecture</DefaultName>
     <Icon>project-icon.png</Icon>

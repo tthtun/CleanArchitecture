@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="3D68A845-300E-4D15-8EAA-28F9B51DB6BC" Version="1.0.1" Language="en-US" Publisher="Greg Trevellick" />
+        <Identity Id="3D68A845-300E-4D15-8EAA-28F9B51DB6BC" Version="1.0.2" Language="en-US" Publisher="Greg Trevellick" />
         <DisplayName>Clean Architecture</DisplayName>
         <Description xml:space="preserve">A template for a solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using .NET Core. </Description>
         <MoreInfo>https://github.com/GregTrevellick/CleanArchitecture</MoreInfo>
         <License>LICENSE.txt</License>
         <GettingStartedGuide>https://github.com/ardalis/CleanArchitecture</GettingStartedGuide>
-        <ReleaseNotes>https://github.com/GregTrevellick/CleanArchitecture/blob/master/CHANGELOG.md</ReleaseNotes>
+        <ReleaseNotes>https://github.com/GregTrevellick/CleanArchitecture/blob/master/vsixArtefacts/CHANGELOG.md</ReleaseNotes>
         <Icon>Resources\VsixExtensionPreview_90x90.png</Icon>
         <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
         <Tags>DDD, clean architecture, template, ardalis</Tags>
