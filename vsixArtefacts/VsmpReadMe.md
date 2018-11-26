@@ -1,6 +1,6 @@
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/CleanArchitecture/pulls
 
-A solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using ASP.NET Core. 
+A solution template that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using ASP.NET Core. 
 
 >##### Based on Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture).
 
