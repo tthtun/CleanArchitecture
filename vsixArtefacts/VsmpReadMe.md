@@ -4,14 +4,6 @@ A solution structure that can be used to build Domain-Driven Design (DDD)-based 
 
 >##### Based on Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture).
 
-When you create a new project...
-
-![](screen0.png)
-
-...here's what you get...
-
-![](screen1.png)
-
 - [Overview](https://github.com/ardalis/CleanArchitecture#cleanarchitecture)
 - [Goals](https://github.com/ardalis/CleanArchitecture#goals)
 - [Design Decisions and Dependencies](https://github.com/ardalis/CleanArchitecture#design-decisions-and-dependencies)
@@ -19,6 +11,14 @@ When you create a new project...
 - [The Infrastrucutre Project](https://github.com/ardalis/CleanArchitecture#the-infrastructure-project)  
 - [The Web Project](https://github.com/ardalis/CleanArchitecture#the-web-project)  
 - [The Test Project](https://github.com/ardalis/CleanArchitecture#the-test-project)
+
+When you create a new project...
+
+![](screen0.png)
+
+...here's what you get...
+
+![](screen1.png)
 
 If you like this **free** extension please take just a few seconds to give it a rating.
 
