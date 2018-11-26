@@ -10,10 +10,10 @@
       "targetPath": "screen1.png"
     }
   ],
-  "categories": [
-    "documentation",
-    "setup and deployment",
-    "team development"
+  "categories": [   
+    "coding",
+    "modeling",
+    "scaffolding"
   ],
   "identity": {
     "internalName": "CleanArchitecture"
