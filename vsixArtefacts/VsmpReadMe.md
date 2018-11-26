@@ -1,4 +1,6 @@
-A simple extension that ....
+A simple extension that
+
+>Based upon Steve "ardalis" Smith's 'Clean Architecture' solution
 
 When you create a new project...
 
