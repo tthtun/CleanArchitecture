@@ -1,4 +1,4 @@
->### NOTE: This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a Visual Studio extension.
+>### NOTE: This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a Visual Studio extension. 
 > [More info](https://github.com/GregTrevellick/CleanArchitecture#the-fork)
 
 
@@ -118,7 +118,12 @@ In a real application I will likely have separate test projects, organized based
 
 ## The Fork 
 
-bhbh bh bh bk jb kj bkj bk
+To faciltate publication as a Visual Studio extension the following changes have been made within this fork:
+- Addition of folder `\.template.config`. This defines the projects included in the extension content.
+- Addition of folder `\vsixArtefacts`. Miscellaneous files related mainly to publishing the extension.
+- Addition of folder `\vsixTemplatePackSideWaffle`. This defines the extension itself.
+- Addition of various CI-related files at the root of the repository. Primarily used to drive badges in the `readme` file.
+- Addition of text to the `readme` file. Changes limited to top and tailing of credits, badges and notes about the fork. 
 
 ## Credits
 
