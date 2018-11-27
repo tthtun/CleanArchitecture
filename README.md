@@ -1,6 +1,5 @@
->#### PLEASE NOTE
->### This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a Visual Studio extension.
-> [More info](https://github.com/GregTrevellick/CleanArchitecture#the-test-project)
+>### NOTE: This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a Visual Studio extension.
+> [More info](https://github.com/GregTrevellick/CleanArchitecture#the-fork)
 
 
 <!--BadgesSTART-->
@@ -116,6 +115,10 @@ In a real application I will likely have separate test projects, organized based
 - [Moq](https://www.nuget.org/packages/Moq/) I'm using Moq as a mocking framework for white box behavior-based tests. If I have a method that, under certain circumstances, should perform an action that isn't evident from the object's observable state, mocks provide a way to test that. I could also use my own Fake implementation, but that requires a lot more typing and files. Moq is great once you get the hang of it, and assuming you don't have to mock the world (which we don't in this case because of good, modular design).
 
 - [Microsoft.AspNetCore.TestHost](https://www.nuget.org/packages/Microsoft.AspNetCore.TestHost) I'm using TestHost to test my web project using its full stack, not just unit testing action methods. Using TestHost, you make actual HttpClient requests without going over the wire (so no firewall or port configuration issues). Tests run in memory and are very fast, and requests exercise the full MVC stack, including routing, model binding, model validation, filters, etc.
+
+## The Fork 
+
+bhbh bh bh bk jb kj bkj bk
 
 ## Credits
 
