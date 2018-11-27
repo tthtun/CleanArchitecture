@@ -1,5 +1,6 @@
 >#### PLEASE NOTE
->**This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a Visual Studio extension.**
+>### This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a Visual Studio extension.
+> [More info](https://github.com/GregTrevellick/CleanArchitecture#the-test-project)
 
 
 <!--BadgesSTART-->
