@@ -1,4 +1,4 @@
->### NOTE: This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.CleanArchitecture). 
+>## NOTE: This repo is a fork of Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture) repo with additional code to faciltate publication as a [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.CleanArchitecture). 
 > [More info](https://github.com/GregTrevellick/CleanArchitecture#the-fork)
 
 
