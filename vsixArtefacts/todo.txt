@@ -1,0 +1,9 @@
+set new vsix category as Template not Tool
+
+squash commits
+
+renovate - needs a renovate.json which should arrive via a automated PR, unless forks not allowed
+https://renovatebot.com/docs/configuration-options/#renovatefork
+
+
+
