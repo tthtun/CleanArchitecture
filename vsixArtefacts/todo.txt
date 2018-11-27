@@ -4,8 +4,4 @@ squash commits
 
 renovate - needs a renovate.json which should arrive via a automated PR - https://renovatebot.com/docs/configuration-options/#renovatefork
 
-.bettercodehub.yml
-
-.codebeatignore
-
 sonar - login - admin - general settings - analysis scope - Configure the files that should be completely ignored by the analysis - Source File Exclusions - src/CleanArchitecture.Web/wwwroot/lib/**/*
