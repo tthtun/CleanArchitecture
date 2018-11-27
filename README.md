@@ -32,7 +32,7 @@
 [![Sonar&metric=vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=CleanArchitecture&metric=vulnerabilities)](https://sonarcloud.io/component_measures?id=CleanArchitecture&metric=vulnerabilities)
 [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/6raa1n0tucf66h0q?svg=true)](https://ci.appveyor.com/project/GregTrevellick/CleanArchitecture)
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/CleanArchitecture.svg)](https://ci.appveyor.com/project/GregTrevellick/CleanArchitecture/build/tests)
-[![Azure Build Status](https://gregtrevellick.visualstudio.com/CleanArchitecture/_apis/build/status/CleanArchitecture)](https://gregtrevellick.visualstudio.com/CleanArchitecture/_build/latest?definitionId=5)
+[![Azure Build Status](https://gregtrevellick.visualstudio.com/CleanArchitecture/_apis/build/status/CleanArchitecture)](https://gregtrevellick.visualstudio.com/CleanArchitecture/_build/latest?definitionId=41)
 [![InspecodeRocro Job Status](https://inspecode.rocro.com/badges/github.com/GregTrevellick/CleanArchitecture/status?token=WKSXU-jLYaQ1gLRpIJHkwIlG7ICpchlzi2Bc6bUpmTI)](https://inspecode.rocro.com/jobs/github.com/GregTrevellick/CleanArchitecture/latest?completed=true)
 [![Hound](https://img.shields.io/badge/hound_ci-checked-brightgreen.svg)](https://houndci.com/)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-brightgreen.svg)](https://www.accesslint.com)
