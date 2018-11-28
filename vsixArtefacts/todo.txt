@@ -1,17 +1,5 @@
-must
-   set new vsix category as Template not Tool
+eventually...set new vsix category as Template not Tool
 
+last minute only - squash commits
 
-
-last minute only
-   squash commits
-
-
-
-wait and see
-   renovate - needs a renovate.json which should arrive via a automated PR - https://renovatebot.com/docs/configuration-options/#renovatefork
-
-
-
-to be documented
-   sonar - login - admin - general settings - analysis scope - Configure the files that should be completely ignored by the analysis - Source File Exclusions - src/CleanArchitecture.Web/wwwroot/lib/**/*
+done - renovate - https://renovatebot.com/docs/configuration-options/#renovatefork
