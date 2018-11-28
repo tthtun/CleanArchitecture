@@ -1,0 +1,12 @@
+eventually...set new vsix category as Template not Tool
+
+done - renovate - https://renovatebot.com/docs/configuration-options/#renovatefork
+
+Squashing
+=========
+Can do this easily without git rebase or git merge --squash. If you want to write the new commit message from scratch, this suffices:
+   git reset --soft HEAD~3 &&
+   git commit
+Now push to repo:
+   git push --force
+See https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642
