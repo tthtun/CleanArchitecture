@@ -21,4 +21,4 @@ git remote -v // Verify the new upstream repository you've specified for your fo
 git fetch upstream // Commits to master will be stored in a local branch, upstream/master.
 git checkout master // Check out your fork's local master branch.
 git merge upstream/master // Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.
-
+-test using CleanArchitecture.Vsix.slnrk
