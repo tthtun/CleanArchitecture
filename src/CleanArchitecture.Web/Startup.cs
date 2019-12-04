@@ -1,107 +1,79 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using CleanArchitecture.Core.SharedKernel;
-using CleanArchitecture.Infrastructure.Data;
+﻿using Ardalis.ListStartupServices;
+using CleanArchitecture.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace CleanArchitecture.Web
 {
-    public class Startup
-    {
-        public Startup(IConfiguration config)
-        {
-            Configuration = config;
-        }
+	public class Startup
+	{
+		public Startup(IConfiguration config) => this.Configuration = config;
 
-        public IConfiguration Configuration { get; }
+		public IConfiguration Configuration { get; }
 
-        public IServiceProvider ConfigureServices(IServiceCollection services)
-        {
-            services.Configure<CookiePolicyOptions>(options =>
+		public IServiceProvider ConfigureServices(IServiceCollection services)
+		{
+			services.Configure<CookiePolicyOptions>(options =>
+			{
+				options.CheckConsentNeeded = context => true;
+				options.MinimumSameSitePolicy = SameSiteMode.None;
+			});
+
+			services.AddDbContext();
+
+			services.AddControllersWithViews().AddNewtonsoftJson();
+			services.AddRazorPages();
+
+			services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" }));
+
+            // add list services for diagnostic purposes - see https://github.com/ardalis/AspNetCoreStartupServices
+            services.Configure<ServiceConfig>(config =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-            // TODO: Add DbContext and IOC
-            string dbName = Guid.NewGuid().ToString();
-            services.AddDbContext<AppDbContext>(options =>
-                options.UseInMemoryDatabase(dbName));
-                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                config.Services = new List<ServiceDescriptor>(services);
 
-            services.AddMvc()
-                .AddControllersAsServices()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                // optional - default path to view services is /listallservices - recommended to choose your own path
+                config.Path = "/listservices";
             });
 
-            return BuildDependencyInjectionProvider(services);
+            return ContainerSetup.InitializeWeb(Assembly.GetExecutingAssembly(), services);
         }
 
-        private static IServiceProvider BuildDependencyInjectionProvider(IServiceCollection services)
-        {
-            var builder = new ContainerBuilder();
-
-            // Populate the container using the service collection
-            builder.Populate(services);
-
-            // TODO: Add Registry Classes to eliminate reference to Infrastructure
-            Assembly webAssembly = Assembly.GetExecutingAssembly();
-            Assembly coreAssembly = Assembly.GetAssembly(typeof(BaseEntity));
-            Assembly infrastructureAssembly = Assembly.GetAssembly(typeof(EfRepository)); // TODO: Move to Infrastucture Registry
-            builder.RegisterAssemblyTypes(webAssembly, coreAssembly, infrastructureAssembly).AsImplementedInterfaces();
-
-            IContainer applicationContainer = builder.Build();
-            return new AutofacServiceProvider(applicationContainer);
-        }
-
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			if (env.EnvironmentName == "Development")
+			{
+				app.UseDeveloperExceptionPage();
+                app.UseShowAllServicesMiddleware();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+			else
+			{
+				app.UseExceptionHandler("/Home/Error");
+				app.UseHsts();
+			}
+			app.UseRouting();
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
+			app.UseHttpsRedirection();
+			app.UseStaticFiles();
+			app.UseCookiePolicy();
 
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
-            app.UseSwagger();
+			// Enable middleware to serve generated Swagger as a JSON endpoint.
+			app.UseSwagger();
 
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
+			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+			app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
-    }
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapDefaultControllerRoute();
+				endpoints.MapRazorPages();
+			});
+		}
+	}
 }

@@ -1,5 +1,5 @@
 ﻿using CleanArchitecture.Core.Entities;
-using CleanArchitecture.Core.Interfaces;
+using CleanArchitecture.SharedKernel.Interfaces;
 using CleanArchitecture.Web.ApiModels;
 using CleanArchitecture.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
@@ -7,9 +7,7 @@ using System.Linq;
 
 namespace CleanArchitecture.Web.Api
 {
-    [Route("api/[controller]")]
-    [ValidateModel]
-    public class ToDoItemsController : Controller
+    public class ToDoItemsController : BaseApiController
     {
         private readonly IRepository _repository;
 

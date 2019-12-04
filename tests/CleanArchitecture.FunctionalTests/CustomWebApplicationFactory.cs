@@ -1,5 +1,6 @@
-﻿using CleanArchitecture.Core.Interfaces;
+﻿using CleanArchitecture.SharedKernel.Interfaces;
 using CleanArchitecture.Infrastructure.Data;
+using CleanArchitecture.UnitTests;
 using CleanArchitecture.Web;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -8,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace CleanArchitecture.Tests.Integration.Web
+namespace CleanArchitecture.FunctionalTests
 {
     public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<Startup>
     {
@@ -55,7 +56,7 @@ namespace CleanArchitecture.Tests.Integration.Web
                     catch (Exception ex)
                     {
                         logger.LogError(ex, "An error occurred seeding the " +
-                            "database with test messages. Error: {ex.Message}");
+                            $"database with test messages. Error: {ex.Message}");
                     }
                 }
             });
