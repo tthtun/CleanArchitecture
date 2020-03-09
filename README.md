@@ -7,7 +7,7 @@
 [![Read Me Synchronizer](https://img.shields.io/badge/-powered%20by%20ReadMeSynchronizer-brightgreen.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/CleanArchitecture?branch=master)](https://bettercodehub.com/results/GregTrevellick/CleanArchitecture)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3b74ee0e8da64daf94199f8a7f2fcf12)](https://www.codacy.com/project/gtrevellick/CleanArchitecture/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/CleanArchitecture&amp;utm_campaign=Badge_Grade_Dashboard)
-[![CodeBeat](https://codebeat.co/badges/undefined)](https://codebeat.co/projects/github-com-gregtrevellick-cleanarchitecture-master)
+<!-- no md -->
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/CleanArchitecture/badge)](https://www.codefactor.io/repository/github/GregTrevellick/CleanArchitecture)
 [![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/ardalis/CleanArchitecture.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ardalis/CleanArchitecture/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ardalis/CleanArchitecture.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ardalis/CleanArchitecture/context:javascript)
