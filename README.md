@@ -9,6 +9,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3b74ee0e8da64daf94199f8a7f2fcf12)](https://www.codacy.com/project/gtrevellick/CleanArchitecture/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/CleanArchitecture&amp;utm_campaign=Badge_Grade_Dashboard)
 <!-- no md -->
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/CleanArchitecture/badge)](https://www.codefactor.io/repository/github/GregTrevellick/CleanArchitecture)
+[![CodeScene Code Health](https://codescene.io/projects/7067/status-badges/code-health)](https://codescene.io/projects/7067)
 [![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/ardalis/CleanArchitecture.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ardalis/CleanArchitecture/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ardalis/CleanArchitecture.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ardalis/CleanArchitecture/context:javascript)
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/CleanArchitecture.svg)](https://github.com/GregTrevellick/CleanArchitecture)
