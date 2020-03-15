@@ -11,12 +11,12 @@ install:
 before_build:
     - cmd: nuget restore vsixArtefacts/CleanArchitecture.Vsix.sln
     - dotnet tool install -g dotnet-sonarscanner
-    - dotnet sonarscanner begin /k:"CleanArchitecture" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
+    - dotnet sonarscanner begin /key:"CleanArchitecture" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
 build:
     project: vsixArtefacts/CleanArchitecture.Vsix.sln
     verbosity: minimal
 after_build:
-     - dotnet sonarscanner end /d:"sonar.login=%my_encrypted_sonarqube_token%"
+    - dotnet sonarscanner end /d:"sonar.login=%my_encrypted_sonarqube_token%"
 notifications:
 - provider: Email
   to:
