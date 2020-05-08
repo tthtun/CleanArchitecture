@@ -1,0 +1,24 @@
+eventually...set new vsix category as Template not Tool
+
+done - renovate - https://renovatebot.com/docs/configuration-options/#renovatefork
+
+Squashing
+=========
+Can do this easily without git rebase or git merge --squash. If you want to write the new commit message from scratch, this suffices:
+   git reset --soft HEAD~3 &&
+   git commit
+Now push to repo:
+   git push --force
+See https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642
+
+
+
+SYNC WITH UPSTREAM
+==================
+git remote -v // List the current configured remote repository for your fork.
+git remote add upstream https://github.com/ardalis/cleanarchitecture.git // Specify a new remote upstream repository that will be synced with the fork.
+git remote -v // Verify the new upstream repository you've specified for your fork.
+git fetch upstream // Commits to master will be stored in a local branch, upstream/master.
+git checkout master // Check out your fork's local master branch.
+git merge upstream/master // Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.
+-test using CleanArchitecture.Vsix.slnrk
