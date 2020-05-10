@@ -1,24 +1,33 @@
 ﻿using Ardalis.ListStartupServices;
+using Autofac;
 using CleanArchitecture.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Linq;
 
 namespace CleanArchitecture.Web
 {
 	public class Startup
 	{
-		public Startup(IConfiguration config) => this.Configuration = config;
+		private readonly IWebHostEnvironment _env;
+
+		public Startup(IConfiguration config, IWebHostEnvironment env)
+		{
+			Configuration = config;
+			_env = env;
+		}
 
 		public IConfiguration Configuration { get; }
 
-		public IServiceProvider ConfigureServices(IServiceCollection services)
+		public void ConfigureServices(IServiceCollection services)
 		{
 			services.Configure<CookiePolicyOptions>(options =>
 			{
@@ -26,32 +35,42 @@ namespace CleanArchitecture.Web
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 
-			services.AddDbContext();
+			string connectionString = Configuration.GetConnectionString("SqliteConnection");  //Configuration.GetConnectionString("DefaultConnection");
+
+
+			services.AddDbContext(connectionString);
 
 			services.AddControllersWithViews().AddNewtonsoftJson();
 			services.AddRazorPages();
 
-			services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" }));
+			services.AddSwaggerGen(c => {
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+				c.EnableAnnotations();
+			});
 
-            // add list services for diagnostic purposes - see https://github.com/ardalis/AspNetCoreStartupServices
-            services.Configure<ServiceConfig>(config =>
-            {
-                config.Services = new List<ServiceDescriptor>(services);
+			// add list services for diagnostic purposes - see https://github.com/ardalis/AspNetCoreStartupServices
+			services.Configure<ServiceConfig>(config =>
+			{
+				config.Services = new List<ServiceDescriptor>(services);
 
-                // optional - default path to view services is /listallservices - recommended to choose your own path
-                config.Path = "/listservices";
-            });
+				// optional - default path to view services is /listallservices - recommended to choose your own path
+				config.Path = "/listservices";
+			});
+		}
 
-            return ContainerSetup.InitializeWeb(Assembly.GetExecutingAssembly(), services);
-        }
+		public void ConfigureContainer(ContainerBuilder builder)
+		{
+			builder.RegisterModule(new DefaultInfrastructureModule(_env.EnvironmentName == "Development"));
+		}
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.EnvironmentName == "Development")
 			{
 				app.UseDeveloperExceptionPage();
-                app.UseShowAllServicesMiddleware();
-            }
+				app.UseShowAllServicesMiddleware();
+			}
 			else
 			{
 				app.UseExceptionHandler("/Home/Error");

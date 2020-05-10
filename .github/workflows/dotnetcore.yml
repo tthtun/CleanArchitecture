@@ -1,10 +1,6 @@
 name: .NET Core
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   build:
@@ -17,9 +13,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    - name: Test with dotnet
+      run: dotnet test ./CleanArchitecture.sln --configuration Release
