@@ -2,18 +2,37 @@ SYNC WITH UPSTREAM
 ==================
 
 clone get ardalis latest version 
+
 build ardalis latest version (to prove it does)
+
 run the vsix, create a new sln, compare ardalis to trevellick - should be SOME diffs
+
 git remote -v // List the current configured remote repository for your fork (ardalis not listed)
+
 git remote add upstream https://github.com/ardalis/cleanarchitecture.git // Specify a new remote upstream repository that will be synced with the fork.
+
 git remote -v // Verify the new upstream repository you've specified for your fork (ardalis is listed)
+
 git fetch upstream // updates in remote upstream will be fetched to local repo in "upstream/master"
+
 git merge upstream/master // merge the changes in upstream/master into your local master branch
+
 resolve merge conflicts
+
 Hint: Solution Items\template.json defines the projects included in the solution
+
 build trevellick CleanArchitecture.Vsix.sln (to prove it does)
+
 build trevellick CleanArchitecture.sln (to prove it does) 
+
+run all unit tests
+
+run the website & smoke test it
+
 Update version number in source.extension.vsixmanifest, set vsixTemplatePackSideWaffle.csproj as start up project, run the vsix, create a new sln, build it (to prove it does), compare ardalis to trevellick - should be NO diffs
+
 Publish to marketplace (via VsmpPublish.ps - inc. update version number and create github release), upgrade in VS, create a new sln from the published vsix, compare to ardalis - should be NO diffs
-Hint: refusing to allow an OAuth App to create or update workflow `.github/workflows/dotnetcore.yml` without `workflow` scope Fix: within the fork, add the same GitHub Action file (.github\workflow\blah.yml) as the upstream Also: https://github.community/t5/GitHub-Actions/Refusing-to-allow-an-integration-to-create-or-update/td-p/32472
+
+Hint: refusing to allow an OAuth App to create or update workflow `.github/workflows/dotnetcore.yml` without `workflow` scope Fix: within the fork, add the same GitHub Action file (.github\workflow\blah.yml) as the upstream Also: https://github.community/t5/GitHub-Actions/
+Refusing-to-allow-an-integration-to-create-or-update/td-p/32472
 
