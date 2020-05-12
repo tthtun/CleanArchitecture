@@ -15,4 +15,5 @@ build trevellick CleanArchitecture.Vsix.sln (to prove it does)
 build trevellick CleanArchitecture.sln (to prove it does) 
 Update version number in source.extension.vsixmanifest, set vsixTemplatePackSideWaffle.csproj as start up project, run the vsix, create a new sln, build it (to prove it does), compare ardalis to trevellick - should be NO diffs
 Publish to marketplace (via VsmpPublish.ps - inc. update version number and create github release), upgrade in VS, create a new sln from the published vsix, compare to ardalis - should be NO diffs
-Hint: refusing to allow an OAuth App to create or update workflow `.github/workflows/dotnetcore.yml` without `workflow` scope https://github.community/t5/GitHub-Actions/Refusing-to-allow-an-integration-to-create-or-update/td-p/32472
+Hint: refusing to allow an OAuth App to create or update workflow `.github/workflows/dotnetcore.yml` without `workflow` scope Fix: within the fork, add the same GitHub Action file (.github\workflow\blah.yml) as the upstream Also: https://github.community/t5/GitHub-Actions/Refusing-to-allow-an-integration-to-create-or-update/td-p/32472
+
