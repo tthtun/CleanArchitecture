@@ -4,14 +4,14 @@
   "description": "template description",
   "name": "Clean Architecture",
   "defaultName": "CleanArchitecture",
-  "identity": "Clean.Architecture.CSharp",
-  "groupIdentity": "Clean.Architecture",
+  "identity": "CleanArchitecture.CSharp",
+  "groupIdentity": "CleanArchitecture",
   "tags": {
     "language": "C#",
     "type": "project"
   },
   "shortName": "ClnArc",
-  "sourceName": "CleanArchitectureSolutionTemplate",
+  "sourceName": "CleanArchitecture",
   "guids": [],
   "primaryOutputs": [
     {

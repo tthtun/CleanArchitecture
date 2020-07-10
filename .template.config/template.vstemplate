@@ -9,7 +9,7 @@
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <SortOrder>5000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <ProvideDefaultName>false</ProvideDefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
   </TemplateData>
@@ -18,7 +18,7 @@
     <CustomParameters>
       <CustomParameter Name = "$language$" Value="CSharp" />
       <CustomParameter Name = "$uistyle$" Value="none"/>
-      <CustomParameter Name = "$groupid$" Value="Clean.Architecture" />
+      <CustomParameter Name = "$groupid$" Value="CleanArchitecture" />
       <CustomParameter Name = "SideWaffleNewProjNode" Value="CSharp\Web"/>
     </CustomParameters>
   </TemplateContent>
