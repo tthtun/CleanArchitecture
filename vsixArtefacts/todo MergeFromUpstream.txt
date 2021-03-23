@@ -27,7 +27,7 @@ build trevellick CleanArchitecture.Vsix.sln (to prove it does)
 
 build trevellick CleanArchitecture.sln (to prove it does) 
 
-run all unit tests
+run all unit tests (in CleanArchitecture.Vsix.sln)
 
 run the website & smoke test it
 

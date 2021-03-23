@@ -6,11 +6,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{106AE906-507
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B31B4797-1D9F-4288-808C-BE9A31A98C7D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Core", "..\src\CleanArchitecture.Core\CleanArchitecture.Core.csproj", "{4548EB20-1D1B-477B-AF6E-DD55653A6583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.Core", "..\src\Clean.Architecture.Core\Clean.Architecture.Core.csproj", "{4548EB20-1D1B-477B-AF6E-DD55653A6583}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Infrastructure", "..\src\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj", "{220361D6-9C76-4E3F-BD34-3C7B50E2CA4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.Infrastructure", "..\src\Clean.Architecture.Infrastructure\Clean.Architecture.Infrastructure.csproj", "{220361D6-9C76-4E3F-BD34-3C7B50E2CA4D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Web", "..\src\CleanArchitecture.Web\CleanArchitecture.Web.csproj", "{C9751CB7-4CD6-4633-A99A-4F6ADD525437}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.Web", "..\src\Clean.Architecture.Web\Clean.Architecture.Web.csproj", "{C9751CB7-4CD6-4633-A99A-4F6ADD525437}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vsixTemplatePackSideWaffle", "..\vsixTemplatePackSideWaffle\vsixTemplatePackSideWaffle.csproj", "{BC6367D2-1174-47E7-BAA5-4E5B4BCAC873}"
 EndProject
@@ -35,13 +35,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		VsmpReadMe.md = VsmpReadMe.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.FunctionalTests", "..\tests\CleanArchitecture.FunctionalTests\CleanArchitecture.FunctionalTests.csproj", "{51695A32-7D6B-45A9-9949-9BECBC02C1B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.FunctionalTests", "..\tests\Clean.Architecture.FunctionalTests\Clean.Architecture.FunctionalTests.csproj", "{51695A32-7D6B-45A9-9949-9BECBC02C1B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.IntegrationTests", "..\tests\CleanArchitecture.IntegrationTests\CleanArchitecture.IntegrationTests.csproj", "{A983C3E6-7987-45F6-9F21-5609475E6E7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.IntegrationTests", "..\tests\Clean.Architecture.IntegrationTests\Clean.Architecture.IntegrationTests.csproj", "{A983C3E6-7987-45F6-9F21-5609475E6E7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.UnitTests", "..\tests\CleanArchitecture.UnitTests\CleanArchitecture.UnitTests.csproj", "{A78FB0D5-0FD3-44F5-B450-F35353832719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.UnitTests", "..\tests\Clean.Architecture.UnitTests\Clean.Architecture.UnitTests.csproj", "{A78FB0D5-0FD3-44F5-B450-F35353832719}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.SharedKernel", "..\src\CleanArchitecture.SharedKernel\CleanArchitecture.SharedKernel.csproj", "{7A17859B-2C35-43DD-A50D-10BAA794184C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Architecture.SharedKernel", "..\src\Clean.Architecture.SharedKernel\Clean.Architecture.SharedKernel.csproj", "{7A17859B-2C35-43DD-A50D-10BAA794184C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
