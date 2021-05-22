@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Ardalis.Specification;
-using Clean.Architecture.Core.Entities;
+using Clean.Architecture.Core.ProjectAggregate;
 using Clean.Architecture.Core.Services;
 using Clean.Architecture.SharedKernel.Interfaces;
 using Moq;
@@ -15,7 +15,7 @@ namespace Clean.Architecture.UnitTests.Core.Services
         [Fact]
         public async Task ReturnsNotFoundGivenNoRemainingItems()
         {
-            var repo = new Mock<IRepository>();
+            var repo = new Mock<IRepository<ToDoItem>>();
             var service = new ToDoItemSearchService(repo.Object);
             repo.Setup(r => r.ListAsync(It.IsAny<ISpecification<ToDoItem>>()))
                 .ReturnsAsync(new List<ToDoItem>());
@@ -28,7 +28,7 @@ namespace Clean.Architecture.UnitTests.Core.Services
         [Fact]
         public async Task ReturnsFirstItemFromList()
         {
-            var repo = new Mock<IRepository>();
+            var repo = new Mock<IRepository<ToDoItem>>();
             var service = new ToDoItemSearchService(repo.Object);
             var testItems = GetTestItems();
             repo.Setup(r => r.ListAsync(It.IsAny<ISpecification<ToDoItem>>()))

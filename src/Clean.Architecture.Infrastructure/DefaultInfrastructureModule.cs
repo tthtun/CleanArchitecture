@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Autofac;
-using Clean.Architecture.Core;
 using Clean.Architecture.Core.Interfaces;
+using Clean.Architecture.Core.ProjectAggregate;
 using Clean.Architecture.Infrastructure.Data;
 using Clean.Architecture.SharedKernel.Interfaces;
 using MediatR;
@@ -13,14 +13,14 @@ namespace Clean.Architecture.Infrastructure
 {
     public class DefaultInfrastructureModule : Module
     {
-        private bool _isDevelopment = false;
-        private List<Assembly> _assemblies = new List<Assembly>();
+        private readonly bool _isDevelopment = false;
+        private readonly List<Assembly> _assemblies = new List<Assembly>();
 
         public DefaultInfrastructureModule(bool isDevelopment, Assembly callingAssembly =  null)
         {
             _isDevelopment = isDevelopment;
-            var coreAssembly = Assembly.GetAssembly(typeof(DatabasePopulator));
-            var infrastructureAssembly = Assembly.GetAssembly(typeof(EfRepository));
+            var coreAssembly = Assembly.GetAssembly(typeof(Project)); // TODO: Replace "Project" with any type from your Core project
+            var infrastructureAssembly = Assembly.GetAssembly(typeof(StartupSetup));
             _assemblies.Add(coreAssembly);
             _assemblies.Add(infrastructureAssembly);
             if (callingAssembly != null)
@@ -44,7 +44,9 @@ namespace Clean.Architecture.Infrastructure
 
         private void RegisterCommonDependencies(ContainerBuilder builder)
         {
-            builder.RegisterType<EfRepository>().As<IRepository>()
+            builder.RegisterGeneric(typeof(EfRepository<>))
+                .As(typeof(IRepository<>))
+                .As(typeof(IReadRepository<>))
                 .InstancePerLifetimeScope();
 
             builder

@@ -1,18 +1,29 @@
 {
-  "author": "Me",
-  "classifications": [],
-  "description": "template description",
-  "name": "Clean Architecture",
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Steve Smith, Erik Dahl",
+  "classifications": [
+    "cleanarch",
+    "clean architecture",
+    "solution",
+    "ddd",
+    "ardalis",
+    "solid",
+    "onion",
+    "hexagonal"
+  ],
   "defaultName": "CleanArchitecture",
-  "identity": "CleanArchitecture.CSharp",
-  "groupIdentity": "CleanArchitecture",
+  "description": "template description",
+  "guids": [],
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "shortName": "ClnArc",
-  "sourceName": "CleanArchitecture",
-  "guids": [],
+  "identity": "Clean.Architecture",
+  "groupIdentity": "CleanArchitecture",
+  "name": "Steve (@ardalis) Smith Clean Architecture",
+  "preferNameDirectory": true,
+  "shortName": "clean-arch",
+  "sourceName": "Clean.Architecture",
   "primaryOutputs": [
     {
       "path": "src\\Clean.Architecture.Core\\Clean.Architecture.Core.csproj"

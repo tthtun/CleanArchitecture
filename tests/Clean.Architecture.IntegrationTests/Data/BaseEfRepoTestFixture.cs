@@ -1,4 +1,5 @@
-﻿using Clean.Architecture.Infrastructure.Data;
+﻿using Clean.Architecture.Core.ProjectAggregate;
+using Clean.Architecture.Infrastructure.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,13 +28,13 @@ namespace Clean.Architecture.IntegrationTests.Data
             return builder.Options;
         }
 
-        protected EfRepository GetRepository()
+        protected EfRepository<Project> GetRepository()
         {
             var options = CreateNewContextOptions();
             var mockMediator = new Mock<IMediator>();
 
             _dbContext = new AppDbContext(options, mockMediator.Object);
-            return new EfRepository(_dbContext);
+            return new EfRepository<Project>(_dbContext);
         }
     }
 }
